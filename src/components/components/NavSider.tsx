@@ -67,6 +67,10 @@ export function ObjectDetectionSidebar() {
       title: "Mobile Net",
       link: "/object_detection/mobile_net",
     },
+    {
+      title: "Facemask Detection",
+      link: "/object_detection/facemask",
+    },
   ];
 
   return (

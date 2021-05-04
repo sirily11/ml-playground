@@ -14,6 +14,7 @@ import NoDataPage from "./components/pages/NoDataPage";
 import SSDDetectionModelPage from "./components/pages/object detection/SSDDetectionModelPage";
 import MobileNetPage from "./components/pages/object detection/MobileNetPage";
 import StyleTransferPage from "./components/pages/image_generation/StyleTransfer";
+import FaceMaskDetectionPage from "./components/pages/object detection/FaceMaskDetectionPage";
 
 function App() {
   return (
@@ -53,6 +54,9 @@ function App() {
               </Route>
               <Route path="/object_detection/mobile_net" exact>
                 <MobileNetPage />
+              </Route>
+              <Route path="/object_detection/facemask" exact>
+                <FaceMaskDetectionPage />
               </Route>
               <Route path="/linear">
                 <div>linear</div>
