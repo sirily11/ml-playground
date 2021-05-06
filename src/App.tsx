@@ -7,6 +7,7 @@ import {
   ImageGenerationSidebar,
   LinearRegressionSider,
   ObjectDetectionSidebar,
+  TextGenerationSidebar,
 } from "./components/components/NavSider";
 import "antd/dist/antd.css";
 import { Content } from "antd/lib/layout/layout";
@@ -15,6 +16,7 @@ import SSDDetectionModelPage from "./components/pages/object detection/SSDDetect
 import MobileNetPage from "./components/pages/object detection/MobileNetPage";
 import StyleTransferPage from "./components/pages/image_generation/StyleTransfer";
 import FaceMaskDetectionPage from "./components/pages/object detection/FaceMaskDetectionPage";
+import LyricsGenerationPage from "./components/pages/text_generation/LyricsGenerationPage";
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
             </Route>
             <Route path="/image_generation">
               <ImageGenerationSidebar />
+            </Route>
+            <Route path="/text_generation">
+              <TextGenerationSidebar />
             </Route>
             <Route path="/" exact>
               <NoDataPage description={"Pick an example"} />
@@ -60,6 +65,12 @@ function App() {
               </Route>
               <Route path="/linear">
                 <div>linear</div>
+              </Route>
+              <Route path="/text_generation" exact>
+                <NoDataPage description="Pick a example from left" />
+              </Route>
+              <Route path="/text_generation/lyrics" exact>
+                <LyricsGenerationPage />
               </Route>
             </Switch>
           </Content>

@@ -133,3 +133,43 @@ export function ImageGenerationSidebar() {
     </Sider>
   );
 }
+
+/**
+ *
+ * Everything is under image generation link
+ */
+export function TextGenerationSidebar() {
+  const [currentPath, setCurrentPath] = React.useState("");
+  const location = useLocation();
+
+  React.useEffect(() => {
+    setCurrentPath(location.pathname);
+  }, [location]);
+
+  const navLinks: MenuNavs[] = [
+    {
+      title: "Lyrics Generation",
+      link: "/text_generation/lyrics",
+    },
+  ];
+
+  return (
+    <Sider
+      theme="light"
+      style={{
+        overflow: "auto",
+        height: "100%",
+        position: "fixed",
+        left: 0,
+      }}
+    >
+      <Menu theme="light" mode="vertical-left" selectedKeys={[currentPath]}>
+        {navLinks.map((c, i) => (
+          <Menu.Item key={c.link}>
+            <NavLink to={c.link}>{c.title} </NavLink>
+          </Menu.Item>
+        ))}
+      </Menu>
+    </Sider>
+  );
+}

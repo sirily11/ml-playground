@@ -23,6 +23,10 @@ export default function Navbar() {
       title: "Image Generation",
       link: "/image_generation",
     },
+    {
+      title: "Text Generation",
+      link: "/text_generation",
+    },
   ];
 
   React.useEffect(() => {
